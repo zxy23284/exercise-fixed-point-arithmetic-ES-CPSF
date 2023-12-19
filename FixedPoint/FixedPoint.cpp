@@ -60,6 +60,7 @@ public:
    */
   template <class TIn, TIn FracBitsIn>
   Fixp operator+(Fixp<TIn, FracBitsIn> In) {
+    assert(checkType(*this,In));
   }
 
   /**
@@ -74,6 +75,7 @@ public:
    */
   template <class TIn, TIn FracBitsIn>
   Fixp operator-(Fixp<TIn, FracBitsIn> In) {
+    assert(checkType(*this,In));
   }
 
   /**
@@ -87,6 +89,7 @@ public:
    */
   template <class TIn, TIn FracBitsIn>
   Fixp<T, FracBits + FracBitsIn> operator*(Fixp<TIn, FracBitsIn> In) {
+    assert(checkType(*this,In));
   }
 
   /**
